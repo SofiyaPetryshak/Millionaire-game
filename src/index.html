@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HW_8</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <button class="btn" id="start_btn">Start new game</button>
+    <button class="btn" id="skip_btn">Skip question</button>
+  </header>
+
+  <section class="main">
+   
+   
+    <div id="card" class="card">
+      <div id="start_card" class="start_card">
+        <h1>Press "Start new game" button to begin your game!</h1>
+      </div>
+
+      <div id="youlost_card" class="youlost_card hide">
+        <h1> Game over! </h1>
+        <p>Your prize is:  <span id='gameover_prize'></span></p>
+      </div>
+
+      <div id="youwon_card" class="youwon_card hide">
+        <h1>Congratulations! You are a millionaire!</h1>
+      </div>
+
+      <div id="question_card" class="question_card hide">
+        <p class="question" id="question">Question</p>
+        <div class="options">
+          <div id="A" class="option_item" onClick="checkAnswer(0)">Answer</div>
+          <div id="B" class="option_item" onClick="checkAnswer(1)">Answer</div>
+          <div id="C" class="option_item" onClick="checkAnswer(2)">Answer</div>
+          <div id="D" class="option_item" onClick="checkAnswer(3)">Answer</div>
+        </div>
+      </div>
+    </div>
+     
+    <div id="results" class="hide">
+      <p>Current prize:  <span id="current_prize"></span></p>
+      <p>Total prize:  <span id="total_prize"></span></p>
+    </div>
+    
+    
+
+  </section>
+
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
